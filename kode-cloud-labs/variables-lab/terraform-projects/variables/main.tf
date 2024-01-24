@@ -1,4 +1,4 @@
 resource "local_file" "jedi" {
-     filename = "/root/first-jedi"
-     content = "phanius"
+     filename = var.jedi["filename"]
+     content = var.jedi["content"]
 }
