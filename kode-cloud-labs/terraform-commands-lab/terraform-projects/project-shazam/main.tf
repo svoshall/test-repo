@@ -5,11 +5,11 @@ resource "local_file" "key_data" {
 }
 resource "tls_private_key" "private_key" {
   algorithm   = "RSA"
-  dsa_bits  = 2048
+  rsa_bits = 2048
   ecdsa_curve = "P384"
 }
 resource "tls_cert_request" "csr" {
-  private_key_pem = file("/tmp/.pki/private_key.pem")
+  private_key_pem = local_file.key_data.content
   depends_on = [ local_file.key_data ]
 
   subject {
