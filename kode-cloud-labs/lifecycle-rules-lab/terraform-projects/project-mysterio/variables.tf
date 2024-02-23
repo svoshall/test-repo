@@ -1,7 +1,7 @@
 variable "length" {
-    default = 10
+  default = 10
 
 }
 variable "prefix" {
-    default = "Mr"
+  default = "Mr"
 }
