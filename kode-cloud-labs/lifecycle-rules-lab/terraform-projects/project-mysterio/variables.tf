@@ -1,5 +1,5 @@
 variable "length" {
-    default = 10
+    default = 12
   
 }
 variable "filename" {
